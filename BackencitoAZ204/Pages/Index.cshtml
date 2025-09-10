@@ -1,5 +1,6 @@
 ﻿@page
 @model IndexModel
+@inject IConfiguration Configuration
 @{
     ViewData["Title"] = "Home page";
 }
@@ -11,4 +12,6 @@
     <p>This will help us learn the CI/CD principles on Azure and App Service.</p>
     
     <p>This paragraph was added on a different commit and it triggered a new Action on GitHub.</p>
+
+    <p>This paragraph will print an env variable: @(Configuration["LEARNING_AZ204"] ?? "{NOT_FOUND}")</p>
 </div>
