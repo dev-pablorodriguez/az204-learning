@@ -2,6 +2,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Logging.AddAzureWebAppDiagnostics();
 
 var app = builder.Build();
 
